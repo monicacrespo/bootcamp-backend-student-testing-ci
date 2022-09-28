@@ -26,4 +26,6 @@ jobs:
 
 Runs your workflow when activity on a pull request in the workflow's repository occurs. For example, if no activity types are specified, the workflow runs when a pull request is opened or reopened or when the head branch of the pull request is updated.
 
+![CIGithubActionWorkflow](CIGithubActionWorkflow1.JPG)
+
 ![CIGithubActionWorkflow](CIGithubActionWorkflow.JPG)

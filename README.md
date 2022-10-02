@@ -17,53 +17,53 @@ A workflow is a configurable automated process that will run one or more jobs. W
 For example, you can run a workflow to automatically add the appropriate labels whenever a pull request is opened or reopened or when the head branch of the pull request is updated, in your repository.
 
 
-
-## Steps I followed to create this workflow
+## Steps to create this workflow
 1. Create a `.github/workflows` directory in your repository on Visual Studio Code.
 2. In the .github/workflows directory, create a file named `ci.yml` and add the following YAML contents into the `ci.yml` file:
 
-```YAML
-name: Ci workflow
+    ```YAML
+    name: Ci workflow
 
-on: pull_request
+    on: pull_request
 
-jobs:
-  ci:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-      - name: Install
-        run: npm ci
-      - name: Tests
-        run: npm test
-```
+    jobs:
+      ci:
+        runs-on: ubuntu-latest
+        steps:
+          - name: Checkout repository
+            uses: actions/checkout@v3
+          - name: Install
+            run: npm ci
+          - name: Tests
+            run: npm test
+    ```
 
 3. Commit, push:
 
-```
-git add .
-git commit -m "added yaml"
-git push -u origin feature/add-ci-file
-```
+    ```
+    git add .
+    git commit -m "added yaml"
+    git push -u origin feature/add-ci-file
+    ```
 
-Note that if the `feature/add-ci-file` branch is already on Github, it would only be needed `git push`.
+    Note that if the `feature/add-ci-file` branch is already on Github, it would only be needed `git push`.
 
 4. Create a pull request on GitHub
-  * Switch to the `feature/add-ci-file` branch that you want to create a pull request for. 
-  * Confirm that `master` is the base branch where you want to merge your changes. 
-  * Click Create Pull Request (PR). 
+    1. Switch to the `feature/add-ci-file` branch that you want to create a pull request for. 
+    2. Confirm that `master` is the base branch where you want to merge your changes. 
+    3. Click Create Pull Request (PR). 
 
-  Creating the PR triggers the `pull_request` event and runs your workflow.
+    Creating the PR triggers the `pull_request` event and runs this workflow.
 
 ## Viewing your workflow results
 1. On GitHub.com, navigate to the main page of the repository.
 2. Under your repository name, click  Actions.
-3. In the left sidebar, click the workflow you want to see `CI workflow` .
+3. In the left sidebar, click the workflow you want to see `CI workflow`.
   ![CIGithubActionWorkflow](CIGithubActionWorkflow0.JPG)
 4. From the list of workflow runs, click the name of the run you want to see `Added ci yaml file`.
 5. Under Jobs , click the `ci` job.
   ![CIGithubActionWorkflow](CIGithubActionWorkflow1.JPG)
+  
   A screenshot of the steps of the above automated continuous integration workflow
   ![CIGithubActionWorkflow](CIGithubActionWorkflow2.JPG)
 

@@ -61,7 +61,6 @@ For example, you can run a workflow to automatically add the appropriate labels 
 3. In the left sidebar, click the workflow you want to see `CI workflow`.
   ![CIGithubActionWorkflow](CIGithubActionWorkflow0.JPG)
 4. From the list of workflow runs, click the name of the run you want to see `Added ci yaml file`.
-  ![CIGithubActionWorkflow](CIGithubActionWorkflow1.JPG)
 5. Under Jobs , click the `ci` job.
   ![CIGithubActionWorkflow](CIGithubActionWorkflow2.JPG)
 6. The log shows you how each of the steps was processed. Expand any of the steps to view its details.

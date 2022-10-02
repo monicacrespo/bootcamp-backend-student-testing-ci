@@ -1,7 +1,6 @@
 # Introduction
 
 This repository presents Continuous Integration (CI) using GitHub Actions following the lesson provided by Bootcamp Backend Lemoncode for the [Module 4 - Rest API - Testing - CI](https://github.com/Lemoncode/bootcamp-backend/tree/ca27da73818fac15986d55afca650a963354b62d/00-stack-documental/04-rest-api/07-testing/07-ci).
-The aim is to configure a Github action to run all tests in this app implemented using node.js.
 
 # CI pipelines - GitHub CI Workflows
 Continuous Integration is the process of automating the integration of multiple contributors' code changes into a single software project. It's a key DevOps best practice that enables developers to quickly merge code changes into a central repository from which builds and tests can be executed.
